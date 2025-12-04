@@ -1,7 +1,7 @@
 import mobility from "../../assets/Mobility.jpg";
 import hearing from "../../assets/hearing.jpg";
-import visual from "../../assets/visual.jpg";
-import intellectual from "../../assets/intellectual.jpg";
+import visual from "../../assets/Visual.jpg";
+import intellectual from "../../assets/Intellectual.jpg";
 import Psychological from "../../assets/Psychological.jpg";
 import speech from "../../assets/speech.jpg";
 
