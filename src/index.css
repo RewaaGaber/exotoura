@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "react-date-range/dist/styles.css";
+@import "react-date-range/dist/theme/default.css";
+
+@import "tailwindcss" important;
+
+@import "primereact/resources/themes/lara-light-blue/theme.css";
+@import "primeicons/primeicons.css";
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+@theme {
+  --font-poppin: "Poppins", "sans-serif";
+  --font-roboto: "Roboto", sans-serif;
+
+  --ease-custom: cubic-bezier(0.37, -0.31, 0.75, 1.25);
+
+  --animate-slide1: slide1 8s ease-in-out 2s;
+  --animate-slide2: slide2 8s ease-in-out 2s;
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
+
+  --shadow-custom: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadow-custom2: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+@utility duration-2000 {
+  transition-duration: 2000ms;
+}
+
+@layer {
+  .row {
+    @apply flex items-center;
+  }
+  .card {
+    @apply border-2 border-[#E5E7EB] rounded-lg p-6 bg-white;
+  }
+
+  /* specific-related styles */
+  .search-bar-comp-wrapper {
+    @apply after:absolute after:h-[50%] after:w-px after:bg-neutral-300;
+    @apply after:top-1/2 after:-translate-y-1/2 after:right-0;
+    @apply after:z-30 relative has-hover:after:hidden has-[+div_*:hover]:after:hidden;
+    @apply max-md:after:content-none;
+  }
+  .search-bar-comp {
+    @apply py-4 [&_p]:line-clamp-1 cursor-pointer md:rounded-full relative z-10;
+    @apply [&>p]:text-black [&>span]:text-sm [&>span]:line-clamp-1;
+  }
+  .before-after-layers {
+    @apply before:absolute before:h-full before:w-7 before:top-0 before:-left-7 before:hidden before:bg-[#DDDDDD];
+    @apply after:absolute after:h-full after:w-7 after:top-0 after:-right-7 after:hidden after:bg-[#DDDDDD];
+    @apply max-md:after:content-none max-md:before:content-none;
+  }
+
+  /* react date range styles */
+  .rdrDateRangePickerWrapper {
+    @apply w-full;
+  }
+  .rdrMonth {
+    @apply flex-1 max-md:w-full;
+  }
+  .rdrDay {
+    @apply text-yellow-600 h-12;
+  }
+  .rdrDefinedRangesWrapper {
+    @apply hidden;
+  }
+  .rdrCalendarWrapper {
+    @apply w-full;
+  }
+  .rdrStartEdge,
+  .rdrEndEdge,
+  .rdrInRange,
+  .rdrDayToday .rdrDayNumber span:after {
+    @apply bg-yellow-600;
+  }
+  .rdrStartEdge {
+    @apply rounded-l-2xl;
+  }
+  .rdrEndEdge {
+    @apply rounded-r-2xl;
+  }
+  .rdrDayStartPreview,
+  .rdrDayInPreview,
+  .rdrDayEndPreview {
+    @apply border-yellow-600;
+  }
+  .rdrMonthName {
+    @apply text-center text-xl text-neutral-700;
+  }
+  .rdrMonthAndYearPickers {
+    @apply md:hidden text-center text-xl text-neutral-700;
+  }
+  .rdrMonthAndYearWrapper {
+    @apply md:absolute md:w-[95%] left-1/2 md:-translate-x-1/2;
+  }
+  .rdrDayNumber {
+    @apply text-sm font-medium;
+  }
+  .rdrWeekDay {
+    @apply font-medium;
+  }
+  .rdrDayDisabled {
+    @apply bg-transparent;
+  }
+
+  /* KEY FRAMES */
+  @keyframes slide1 {
+    0% {
+      transform: translateX(0);
+    }
+    12.5% {
+      transform: translateX(-65%);
+    }
+    87.5% {
+      transform: translateX(-65%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide2 {
+    0% {
+      transform: translateX(0);
+    }
+    12.5% {
+      transform: translateX(90%);
+    }
+    87.5% {
+      transform: translateX(90%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* PrimeReact Slider Color Overrides */
+.p-slider .p-slider-range {
+  background: linear-gradient(to right, #f59e0b, #f97316) !important; /* Amber-500 to Orange-500 */
+}
+
+.p-slider .p-slider-handle {
+  background: white !important;
+  border: 2px solid #f97316 !important; /* Orange-500 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.p-slider:not(.p-disabled) .p-slider-handle:hover {
+  background: white !important;
+  border-color: #ea580c !important; /* Orange-600 */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-sand-50: #faf6f1;
+    --color-sand-100: #f5eee4;
+    --color-sand-200: #e9dcc9;
+    --color-sand-300: #dcc9ad;
+    --color-sand-400: #cfb591;
+    --color-sand-500: #c2a175;
+    --color-sand-600: #b58d59;
+    --color-sand-700: #a8793d;
+    --color-sand-800: #8b6521;
+    --color-sand-900: #6e5105;
+  }
+}
+
+@layer components {
+  .hieroglyphic-text {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Add Egyptian-themed animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Add a subtle papyrus texture to backgrounds */
+.papyrus-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4b483' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Add a golden border effect */
+.golden-border {
+  position: relative;
+}
+
+.golden-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffd700, #ffa500, #ffd700);
+  z-index: -1;
+  border-radius: inherit;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Add Egyptian-themed hover effects */
+.egyptian-hover {
+  transition: all 0.3s ease;
+}
+
+.egyptian-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 101, 33, 0.2);
+}
+
+/* Add a sun ray effect */
+.sun-rays {
+  position: relative;
+}
+
+.sun-rays::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
+  transform: translate(-50%, -50%);
+  animation: sunRays 4s ease-in-out infinite;
+}
+
+@keyframes sunRays {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+}

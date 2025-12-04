@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google OAuth Login</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+      }
+
+      #token {
+        margin-top: 20px;
+        word-wrap: break-word;
+        max-width: 80%;
+        font-size: 14px;
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Login with Google</h2>
+
+    <button onclick="signInWithGoogle()">Sign in with Google</button>
+
+    <p id="token">Access Token will appear here...</p>
+
+    <script>
+      function signInWithGoogle() {
+        const client = google.accounts.oauth2.initTokenClient({
+          client_id:
+            "831296562115-l06sjoaoebutqa7epo1pjqhhkr0v4sna.apps.googleusercontent.com",
+          scope:
+            "openid profile email https://www.googleapis.com/auth/userinfo.email",
+          callback: (response) => {
+            if (response.access_token) {
+              document.getElementById("token").innerText =
+                "Access Token: " + response.access_token;
+            } else {
+              document.getElementById("token").innerText =
+                "Failed to retrieve token.";
+            }
+          },
+        });
+        client.requestAccessToken();
+      }
+    </script>
+  </body>
+</html>

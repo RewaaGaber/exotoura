@@ -1,0 +1,15 @@
+export { default as Home } from "./Home";
+export { default as Accomodation } from "./Accommodations";
+export { default as SpecificEvent } from "./SpecificEvent";
+export { default as Events } from "./Events";
+export { default as SpecificAccommodation } from "./SpecificAccommodation";
+export { default as Profile } from "./Profile";
+export { default as MapForAccommodations } from "./MapForAccommodations";
+export { default as Hangout } from "./Hangout";
+export { default as SpecificHangout } from "./SpecificHangout";
+export { default as Disabilities } from "./Disabilities";
+export { default as Volunteering } from "./Volunteering.jsx";
+export { default as VolunteeringCenter } from "./VolunteeringCenter.jsx";
+export { default as Volunteers } from "./Volunteers.jsx";
+export { default as Chat } from "./Chat.jsx";
+export { default as About } from "./About";
