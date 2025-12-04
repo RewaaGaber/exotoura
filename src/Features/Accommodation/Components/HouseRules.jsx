@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import noSmoking from "../../../Assets/no-smoking.png";
-import noPets from "../../../Assets/no-pets.png";
-import noParties from "../../../Assets/dance.png";
-import noChildren from "../../../Assets/no-child-labor.png";
-import quietHours from "../../../Assets/no-shouting.png";
-import noVisitors from "../../../Assets/no-visiting.png";
-import noFood from "../../../Assets/no-food.png";
-import noAlcohol from "../../../Assets/no-alcohol.png";
-import checkoutTime from "../../../Assets/check-out.png";
-import cleanCommonAreas from "../../../Assets/broom.png";
+import noSmoking from "../../../assets/no-smoking.png";
+import noPets from "../../../assets/no-pets.png";
+import noParties from "../../../assets/dance.png";
+import noChildren from "../../../assets/no-child-labor.png";
+import quietHours from "../../../assets/no-shouting.png";
+import noVisitors from "../../../assets/no-visiting.png";
+import noFood from "../../../assets/no-food.png";
+import noAlcohol from "../../../assets/no-alcohol.png";
+import checkoutTime from "../../../assets/check-out.png";
+import cleanCommonAreas from "../../../assets/broom.png";
 export const houseRulesData = [
   {
     id: "No Smoking",

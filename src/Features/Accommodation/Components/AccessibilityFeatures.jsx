@@ -1,17 +1,17 @@
 import React from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
-import ramp from "../../../Assets/ramp.png";
-import elevator from "../../../Assets/elevator.png";
-import shower from "../../../Assets/shower.png";
-import bar from "../../../Assets/holding-wrench.png";
-import doorbell from "../../../Assets/doorbell.png";
-import braile from "../../../Assets/braile.png";
-import seat from "../../../Assets/seat.png";
-import medicalbed from "../../../Assets/disability.png";
-import stairlift from "../../../Assets/stairs.png";
-import toilet from "../../../Assets/toilet.png";
-import handrails from "../../../Assets/handrails.png";
+import ramp from "../../../assets/ramp.png";
+import elevator from "../../../assets/elevator.png";
+import shower from "../../../assets/shower.png";
+import bar from "../../../assets/holding-wrench.png";
+import doorbell from "../../../assets/doorbell.png";
+import braile from "../../../assets/braile.png";
+import seat from "../../../assets/seat.png";
+import medicalbed from "../../../assets/disability.png";
+import stairlift from "../../../assets/stairs.png";
+import toilet from "../../../assets/toilet.png";
+import handrails from "../../../assets/handrails.png";
 
 export const accessibilityFeaturesData = [
   {
